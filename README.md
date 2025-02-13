@@ -1,20 +1,20 @@
-# Tic Tac Toe
+# Tic Tac Toe with Minimax Algorithm
 
-**Tic Tac Toe** is a classic two-player game implemented using different programming languages. This repository provides various implementations of the Tic Tac Toe game, both for human vs. human and human vs. computer modes, allowing players to play this simple yet fun game in their local environments.
+This project is an implementation of the **Tic Tac Toe** game with an AI player powered by the **Minimax algorithm**. The AI is designed to play optimally against a human player, making the game challenging and fun.
 
-This project aims to demonstrate the application of algorithms and logic in a popular game. It includes a user-friendly interface and provides an enjoyable gaming experience.
+The Minimax algorithm is widely used in game theory and artificial intelligence (AI) for decision-making in two-player games like Tic Tac Toe. It aims to find the best possible move for the AI by simulating all possible moves and counter-moves and evaluating each state of the game.
 
-## Features
+## How It Works
 
-- **Human vs. Human Mode**: Two players take turns to mark X and O on the grid.
-- **Human vs. Computer Mode**: A single player can play against the computer, which makes random moves or uses an algorithm to play more intelligently.
-- **Grid Display**: The game board is displayed in a simple, text-based format, with clear marking of X and O.
-- **Win Detection**: The game automatically detects when a player wins or if the game is a draw.
-- **Multiple Language Implementations**: The game is implemented in different programming languages.
+### Minimax Algorithm Overview
 
-## Technologies Used
+The **Minimax algorithm** is based on creating a decision tree where:
+- **Maximizing player (AI)** tries to maximize its score.
+- **Minimizing player (human)** tries to minimize the AI's score.
 
-- **Python**: For the basic implementation of the game with a simple text interface.
-- **JavaScript**: For building an interactive version of the game that can be run in a web browser.
-- **Java**: For demonstrating an object-oriented approach to the game with player interactions.
-- **C++**: For a performance-focused implementation of the game.
+Each terminal state of the game is evaluated as follows:
+- **+10** for AI win (Maximizing player).
+- **-10** for Human win (Minimizing player).
+- **0** for a draw.
+
+The AI uses the algorithm to explore all possible future moves, recursively evaluating the best outcome for itself by simulating the human's possible responses. The AI will always try to get the highest possible score, while the human player tries to minimize the AI's score.
